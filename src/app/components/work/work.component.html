@@ -1,0 +1,136 @@
+<section class="work">
+    <span>from 2020 'til today</span>
+    <h2 tabindex="0">My latest work</h2>
+    @for (item of workItems; track item.companyName){
+        <article class="work__item">
+            <div class="work__item-header">
+              <img class="work__item-logo" [src]="item.logo" [alt]="item.logoDescription">
+              <h4 tabindex="0">{{ item.companyName }}</h4>
+              <img class="work__item-arrow" src="arrow-doodle.png" alt="right arrow doodle">
+            </div>
+
+                @if (item.companyName === "Deepengine"){
+                <p class="work__item--deepengine">Designing a new website style and a set of illustrations for a cybersecurity
+                  platform targeting enterprises and SMBs.</p>
+                <small class="work__item-note">created with Heartbeat team</small>
+            } @else {
+                <p class="work__item-description">{{ item.workDescription }}</p>
+              }
+
+              <div class="work__images-container">
+                <div class="work__image-container-1">
+                  <img class="work__item__img" [src]="item.image1" [alt]="item.imageDescription">
+                </div>
+                <div class="work__image-container-2">
+                  <img class="work__item__img" [src]="item.image2" [alt]="item.imageDescription">
+                </div>
+              </div>
+          </article>
+}
+
+
+
+   <!--  <article class="work__item">
+      <div class="work__item-header">
+        <img class="work__item-logo" src="ruby-logo.avif" alt="Ruby company logo">
+        <h4 tabindex="0">Ruby</h4>
+        <img class="work__item-arrow" src="arrow-doodle.png" alt="right arrow doodle">
+      </div>
+      <p class="work__item-description">Reimagining website for B2B banking solution with a mature look and feel to meet modern
+        e-commerce needs.</p>
+      <div class="work__images-container">
+        <div class="work__image-container-1">
+          <img class="work__item__img" src="ruby-1.avif " alt="Ruby corporate image">
+        </div>
+        <div class="work__image-container-2">
+          <img class="work__item__img" src="ruby-2.avif" alt="Ruby corporate image">
+        </div>
+      </div>
+    </article>
+    <article class="work__item">
+      <div class="work__item-header">
+        <img class="work__item-logo" src="stimulate-logo.webp" alt="Stimulate company logo">
+        <h4 tabindex="0">Stimulate</h4>
+        <img class="work__item-arrow" src="arrow-doodle.png" alt="right arrow doodle">
+      </div>
+      <p class="work__item-description">New vibrant brand for a full-cycle marketing agency enhancing retention revenue for online
+        retailers.</p>
+      <div class="work__images-container">
+        <div class="work__image-container-2">
+          <img class="work__item__img" src="stimulate-2.avif" alt="Stimulate corporate image">
+        </div>
+        <div class="work__image-container-1">
+          <img class="work__item__img" src="stimulate-1.avif" alt="Stimulate corporate image">
+        </div>
+      </div>
+    </article>
+    <article class="work__item">
+      <div class="work__item-header">
+        <img class="work__item-logo" src="quantia-logo.webp" alt="Quantia company logo">
+        <h4 tabindex="0">Quantia</h4>
+        <img class="work__item-arrow" src="arrow-doodle.png" alt="right arrow doodle">
+      </div>
+      <p class="work__item-description">Creating a credible digital presence with a new website and marketing for a security-focused
+        Web3 platform.</p>
+      <div class="work__images-container">
+        <div class="work__image-container-1">
+          <img class="work__item__img" src="quantia-1.avif" alt="Quantia corporate image">
+        </div>
+        <div class="work__image-container-2">
+          <img class="work__item__img" src="quantia-2.avif" alt="Quantia corporate image">
+        </div>
+      </div>
+    </article>
+    <article class="work__item">
+      <div class="work__item-header">
+        <img class="work__item-logo" src="rewardPoint-logo.avif" alt="Reward Point company logo">
+        <h4 tabindex="0">Reward Point</h4>
+        <img class="work__item-arrow" src="arrow-doodle.png" alt="right arrow doodle">
+      </div>
+      <p class="work__item-description">Brand sprint showcasing a logo and dynamic illustrations for a B2B/B2C solution
+        revolutionizing the cash-back process.</p>
+      <div class="work__images-container">
+        <div class="work__image-container-2">
+          <img class="work__item__img" src="rewardPoint-2.avif" alt="Reward Point corporate image">
+        </div>
+        <div class="work__image-container-1">
+          <img class="work__item__img" src="rewardPoint-1.avif" alt="Reward Point corporate image">
+        </div>
+      </div>
+    </article>
+    <article class="work__item">
+      <div class="work__item-header">
+        <img class="work__item-logo" src="memex-logo.avif" alt="Memex company logo">
+        <h4 tabindex="0">Memex</h4>
+        <img class="work__item-arrow" src="arrow-doodle.png" alt="right arrow doodle">
+      </div>
+      <p class="work__item-description">Vizualizing thinkers journey for a note-taking tool through a new website, mobile app, and
+        browser extension.</p>
+      <div class="work__images-container">
+        <div class="work__image-container-1">
+          <img class="work__item__img" src="memex-1.avif" alt="Memex corporate image">
+        </div>
+        <div class="work__image-container-2">
+          <img class="work__item__img" src="memex-2.avif" alt="Memex corporate image">
+        </div>
+      </div>
+    </article> 
+     <article class="work__item">
+      <div class="work__item-header">
+        <img class="work__item-logo" src="deepengine-logo.avif" alt="Deepengine comapny logo">
+        <h4 tabindex="0">Deepengine</h4>
+        <img class="work__item-arrow" src="arrow-doodle.png" alt="right arrow doodle">
+      </div>
+      <p class="work__item--deepengine">Designing a new website style and a set of illustrations for a cybersecurity
+        platform targeting enterprises and SMBs.</p>
+      <small class="work__item-note">created with Heartbeat team</small>
+      <div class="work__images-container">
+        <div class="work__image-container-2">
+          <img class="work__item__img" src="deepengine-2.avif" alt="Deepengine corporate image">
+        </div>
+        <div class="work__image-container-1">
+          <img class="work__item__img" src="deepengine-1.avif" alt="Deepengine corporate image">
+        </div>
+      </div>
+    </article> -->
+  </section>

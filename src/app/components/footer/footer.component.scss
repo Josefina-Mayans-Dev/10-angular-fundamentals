@@ -1,0 +1,65 @@
+@use "../../ui/styles/variables.scss" as variables;
+
+.contact {
+    display: flex;
+    margin-inline:auto;
+    margin-bottom: 20px;
+    width: 85dvw;
+    height: 90px;
+    @extend %card-style;
+    justify-content: space-between;
+  
+    &__info{
+      display: flex;
+      align-items: center;
+  
+      &-icon{
+        width: 30px;
+        height: 30px;
+        margin-left:30px;
+        
+      }
+  
+      &-text{
+        color:black;
+        font-family: Inter, sans-serif;
+        font-size:1.5rem;
+        font-weight: 500;
+        margin-left:10px;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    &__social {
+      display: flex;
+      list-style-type: none;
+      margin-right: 30px;
+      align-items: center;
+      gap:10px;
+      
+  
+      &-item {
+        filter: drop-shadow(rgba(0, 0, 0, 0) 0px 0px 8px);
+        transform: rotate(3deg);
+        border-radius: 20px;
+        &:nth-child(2){
+          transform: rotate(6deg);
+        }
+        &:nth-child(3){
+          transform: rotate(-6deg);
+        }
+        &:nth-child(5){
+          transform: rotate(-6deg);
+        }
+        
+        
+  
+        a img {
+            width: 60px;
+            height: 60px;
+          }
+      }
+    }
+  }

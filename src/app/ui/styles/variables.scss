@@ -1,0 +1,26 @@
+$transition-speed: 0.3s;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+@mixin hover-effect {
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.05);
+      color:white
+    }
+  }
+  
+  @function calculate-vw($px-size, $viewport-width: 1920) {
+    @return ($px-size / $viewport-width) * 100vw;
+  }
+  
+  %card-style {
+    border-radius: 18px;
+    background-color: rgba(238, 236, 236, 0.444);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }

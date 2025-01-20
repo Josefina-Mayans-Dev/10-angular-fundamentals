@@ -1,0 +1,22 @@
+.cta{
+    &__button{
+      margin-inline: 600px;
+      font-family: "Caveat", serif; 
+      color:grey;
+      line-height: 100%;
+      font-size: 2.2rem;
+      font-weight: 700;
+      display: inline-block;
+      transform: rotate(-5deg);
+    }
+  
+    .button-wrapper{
+      --button-scale:2;
+      display: inline-block;
+      transform-origin: center center;
+      transform: scale(var(--button-scale));
+      margin-left: 600px;
+      margin-top: 150px;
+      margin-bottom:90px;
+    }
+}
