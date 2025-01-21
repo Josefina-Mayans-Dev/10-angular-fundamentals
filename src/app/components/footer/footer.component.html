@@ -1,35 +1,17 @@
 <footer class="contact">
-    <a class="contact__info" href="mailto:hello@danielsun.space" aria-label="Email">
-      <img class="contact__info-icon" decoding="async" loading="lazy" src="https://framerusercontent.com/images/nHYOQcuzYrkkZjS0n4cvohxjXjg.svg"
-        alt="plane doodle for sending email">
-      <span class="contact__info-text">hello&#64;danielsun.space</span>
+    <a class="contact__info" [href]="'mailto:' + email" aria-label="Email">
+        <img class="contact__info-icon" decoding="async" loading="lazy"
+            src="https://framerusercontent.com/images/nHYOQcuzYrkkZjS0n4cvohxjXjg.svg"
+            alt="plane doodle for sending email">
+        <span class="contact__info-text">{{ email() }}</span>
     </a>
     <ul class="contact__social">
-      <li class="contact__social-item">
-        <a href="https://twitter.com/danielsun_io" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-          <img src="https://framerusercontent.com/images/8yvYtcx3cfJFOTpz7A4hI9AtiI.png" alt="X logo">
-        </a>
-      </li>
-      <li class="contact__social-item">
-        <a href="">
-          <img src="https://framerusercontent.com/images/qyHjNFaKZK3J0IgI963dEUUJ4.png" alt="Instagram logo">
-        </a>
-      </li>
-      <li class="contact__social-item">
-        <a href="">
-          <img src="https://framerusercontent.com/images/uMA164Althqj1b2vXygS2wyBIgQ.png" alt="Dribbble logo">
-        </a>
-      </li>
-      <li class="contact__social-item">
-        <a href="">
-          <img src="https://framerusercontent.com/images/23QIkTXJxWXuDvTC7jrVLxmu5cA.png" alt="Threads logo">
-        </a>
-      </li>
-      <li class="contact__social-item">
-        <a href="https://www.linkedin.com/in/danielsun-io/" target="_blank" rel="noopener noreferrer"
-          aria-label="LinkedIn">
-          <img src="https://framerusercontent.com/images/RYuwqCxHlxrSfIOO7JZreY9YX9Q.png" alt="LinkedIn logo">
-        </a>
-      </li>
+        @for (link of socialLinks; track link.name) {
+        <li class="contact__social-item">
+            <a [href]="link.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="link.ariaLabel">
+                <img [src]="link.iconSrc" [alt]="link.name + ' logo'">
+            </a>
+        </li>
+        }
     </ul>
-  </footer>
+</footer>

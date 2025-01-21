@@ -1,10 +1,10 @@
 @use "../../ui/styles/variables.scss" as variables;
 
-.circle-gradient{
-    &::before{
+.circle-gradient {
+  &::before {
     content: '';
-    position: absolute; 
-    top:-60%;
+    position: absolute;
+    top: -60%;
     left: 50%;
     transform: translateX(-50%);
     width: 2500px;
@@ -13,54 +13,49 @@
     filter: blur(200px) opacity(0.9);
     z-index: -1;
     pointer-events: none;
+  }
+}
+
+.header {
+  margin-bottom: 4rem;
+  height: 30dvh;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+
+  &__nav {
+    background-color: rgb(0, 0, 0);
+    opacity: 1;
+    border-radius: 80px;
+    height: 44px;
+    padding: 4px;
+    width: 21dvw;
+    position: fixed;
+    z-index: 2;
+  }
+
+  &__menu {
+    @include variables.flex-center;
+    list-style-type: none;
+    gap: 20px;
+  }
+
+  &__menu-item {
+    a {
+      font-weight: 600;
+      color: grey;
+      font-size: 20px;
+      @include variables.hover-effect;
     }
   }
-  
-  
-  
-  .header {
-    margin-bottom: 4rem;
-    height: 30dvh;
-    display: flex;
-    justify-content: center;
-    padding-top: 1rem;
-  
-    &__nav {
-      background-color: rgb(0, 0, 0);
-      opacity: 1;
-      border-radius: 80px;
-      height: 44px;
-      padding: 4px;
-      width: 21dvw;
-      position:fixed;
-      z-index: 2;
-  
-     &__menu {
-        @include variables.flex-center;
-        list-style-type: none;
-        gap: 20px;
-  
-        &-item {
-  
-          a {
-            font-weight: 600;
-            color: grey;
-            font-size: 20px;
-            @include variables.hover-effect;
-  
-          }
-        }
-  
-        .home-icon{
-          width: 30px;
-          height: 30px;
-          @include variables.hover-effect;
-  
-          &:hover {
-            stroke: yellow;
-          
-          }
-        }
-      }
+
+  &__menu-home-icon {
+    width: 30px;
+    height: 30px;
+    @include variables.hover-effect;
+
+    &:hover {
+      stroke: yellow;
     }
   }
+}

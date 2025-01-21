@@ -1,36 +1,34 @@
 <section class="work">
-    <span>from 2020 'til today</span>
-    <h2 tabindex="0">My latest work</h2>
+    <span class="work__subtitle">from 2020 'til today</span>
+    <h2 class="work__title" tabindex="0">{{ sectionTitle() }}</h2>
     @for (item of workItems; track item.companyName){
-        <article class="work__item">
-            <div class="work__item-header">
-              <img class="work__item-logo" [src]="item.logo" [alt]="item.logoDescription">
-              <h4 tabindex="0">{{ item.companyName }}</h4>
-              <img class="work__item-arrow" src="arrow-doodle.png" alt="right arrow doodle">
+    <article class="work__item">
+        <div class="work__header">
+            <img class="work__logo" [src]="item.logo" [alt]="item.logoDescription">
+            <h4 class="work__item-title" tabindex="0">{{ item.companyName }}</h4>
+            <img class="work__arrow" src="arrow-doodle.png" alt="right arrow doodle">
+        </div>
+        <p [class]="item.companyName === 'Deepengine' ? 'work__description--deepengine' : 'work__description'">{{
+            item.workDescription }}</p>
+
+        @if (item.companyName === "Deepengine"){
+        <small class="work__note">created with Heartbeat team</small>
+        }
+
+        <div class="work__images-container">
+            <div [class]="item.image1 === 'stimulate-2.avif' || 'rewardPoint-2.avif' ||'deepengine-2.avif' ? 'work__image-container--wide' : 'work__image-container'">
+                <img class="work__img" [src]="item.image1" [alt]="item.imageDescription">
             </div>
-
-                @if (item.companyName === "Deepengine"){
-                <p class="work__item--deepengine">Designing a new website style and a set of illustrations for a cybersecurity
-                  platform targeting enterprises and SMBs.</p>
-                <small class="work__item-note">created with Heartbeat team</small>
-            } @else {
-                <p class="work__item-description">{{ item.workDescription }}</p>
-              }
-
-              <div class="work__images-container">
-                <div class="work__image-container-1">
-                  <img class="work__item__img" [src]="item.image1" [alt]="item.imageDescription">
-                </div>
-                <div class="work__image-container-2">
-                  <img class="work__item__img" [src]="item.image2" [alt]="item.imageDescription">
-                </div>
-              </div>
-          </article>
-}
+            <div [class]="item.image2 === 'stimulate-1.avif' ||  'rewardPoint-1.avif' ||'deepengine-1.avif' ? 'work__image-container' : 'work__image-container--wide'">
+                <img class="work__img" [src]="item.image2" [alt]="item.imageDescription">
+            </div>
+        </div>
+    </article>
+    }
 
 
 
-   <!--  <article class="work__item">
+    <!--  <article class="work__item">
       <div class="work__item-header">
         <img class="work__item-logo" src="ruby-logo.avif" alt="Ruby company logo">
         <h4 tabindex="0">Ruby</h4>
@@ -133,4 +131,4 @@
         </div>
       </div>
     </article> -->
-  </section>
+</section>

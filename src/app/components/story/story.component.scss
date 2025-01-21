@@ -1,59 +1,60 @@
 @use "../../ui/styles/variables.scss" as variables;
 
-.story{
-    max-width: 100%;
-    overflow-x: hidden;
-    padding: 2rem;
-    
-    h2{
-      font-size: 7rem;
-      margin-left:2rem;
-      margin-right: 20rem;
-      margin-bottom: 5rem;
-      font-weight: 500;
-      letter-spacing: -5px;
-      line-height: 100%;
-    }
-  
-    &__grid__container{
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-auto-flow: row dense;
-      grid-template-rows: auto auto;
-      gap: 20px;
-      padding: 40px;
-      margin: 0 auto;
-    }
-    
-  
-    &__video, &__text{
-      @extend %card-style;
-      display: flex;
-      justify-content: flex-end;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-  
-      p{
-        margin-bottom: 2rem;
-        opacity: 50%;
-        font-size: 1.4rem;
-        opacity: 50%;
-        font-weight: 500;
-        padding-inline: 20px;
-   }   
-    }
-  
-    &__video{
-      grid-column: span 2 / span 2;
-      padding-block: 2rem;
-    }
-  
-      video{
-        width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: cover;
-      }
-  
+.story {
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 2rem;
+
+  h2 {
+    font-size: 7rem;
+    margin-left: 2rem;
+    margin-right: 20rem;
+    margin-bottom: 5rem;
+    font-weight: 500;
+    letter-spacing: -5px;
+    line-height: 100%;
   }
+
+  &__grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-flow: row dense;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 40px;
+    margin: 0 auto;
+  }
+
+
+  &__video,
+  &__text {
+    @extend %card-style;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    p {
+      margin-bottom: 2rem;
+      opacity: 50%;
+      font-size: 1.4rem;
+      opacity: 50%;
+      font-weight: 500;
+      padding-inline: 20px;
+    }
+  }
+
+  &__video {
+    grid-column: span 2 / span 2;
+    padding-block: 2rem;
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+}
